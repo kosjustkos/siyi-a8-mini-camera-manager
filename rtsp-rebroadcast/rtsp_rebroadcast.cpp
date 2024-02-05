@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     g_object_set(server, "service", "8554", NULL);
 
     static constexpr auto launch_string =
-        "rtspsrc location=rtsp://192.168.144.25:8554/main.264 latency=0 "
+        "v4l2src device=/dev/video0 "
         "! rtph265depay "
         "! rtph265pay name=pay0 pt=96";
 
