@@ -25,7 +25,6 @@ int main(int argc, char* argv[]) {
 
     static constexpr auto launch_string =
         "v4l2src device=/dev/video0 "
-        "! rtph265depay "
         "! rtph265pay name=pay0 pt=96";
 
     GstRTSPMediaFactory* factory = gst_rtsp_media_factory_new();
